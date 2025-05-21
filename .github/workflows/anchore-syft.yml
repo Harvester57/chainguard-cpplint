@@ -31,5 +31,6 @@ jobs:
         uses: anchore/sbom-action@v0.20.0
         with:
           image: localbuild/testimage:latest
-          artifact-name: github.sbom.xml
+          artifact-name: github.sbom.json
           dependency-snapshot: false
+          format: cyclonedx-json
