@@ -15,9 +15,9 @@ RUN pip install cpplint==2.0.2
 FROM chainguard/python:latest@sha256:92c3483c8ac7eda088e51952b744cce1f3087fe7560a5da672d918b7c57a65fc
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-04-27"
+LABEL lastupdate="2025-05-21"
 LABEL author="Florian Stosse"
-LABEL description="cpplint.py v0.7.4, built using Python Chainguard based image"
+LABEL description="Cpplint v0.7.4, built using Python Chainguard based image"
 LABEL license="MIT license"
 
 ENV TZ="Europe/Paris"
