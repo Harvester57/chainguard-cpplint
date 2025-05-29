@@ -17,7 +17,7 @@ FROM chainguard/python:latest@sha256:6c48637295791f828deb8056bbcde9b4b252c1191a1
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2025-05-21"
 LABEL author="Florian Stosse"
-LABEL description="Cpplint v0.7.4, built using Python Chainguard based image"
+LABEL description="Cpplint v2.0.2, built using Python Chainguard based image"
 LABEL license="MIT license"
 
 ENV TZ="Europe/Paris"
