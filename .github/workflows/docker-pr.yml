@@ -1,7 +1,7 @@
 name: Docker Image CI
 
 on:
-  push:
+  pull_request:
     branches: [ main ]
 
 jobs:
@@ -18,10 +18,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build
         id: docker_build
         uses: docker/build-push-action@v6.18.0
         with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cpplint-chainguard:latest
+          push: false
+          load: true
+          tags: localbuild/testimage:latest
