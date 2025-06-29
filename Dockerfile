@@ -10,7 +10,7 @@ WORKDIR /cpplint
 RUN python -m venv /cpplint/venv
 
 # Cf. https://pypi.org/project/cpplint/
-RUN pip install cpplint==2.0.2
+RUN pip install cpplint==2.0.2 --no-cache-dir
 
 FROM chainguard/python:latest@sha256:f05174c45fa717309a5d504a976c12690eccd650efeac5221d1d53b32ff41e71
 
