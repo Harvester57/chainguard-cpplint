@@ -25,6 +25,9 @@ ENV TZ="Europe/Paris"
 WORKDIR /cpplint
 
 ENV PYTHONUNBUFFERED=1
-ENV PATH="/venv/bin:$PATH"
+ENV PYTHONDONTWRITEBYTECODE=1
 
 COPY --from=builder /cpplint/venv /venv
+ENV PATH="/venv/bin:$PATH"
+
+RUN cpplint
