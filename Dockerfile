@@ -22,4 +22,4 @@ RUN pip install cpplint==2.0.2 --no-cache-dir
 # Test run
 RUN cpplint --version
 
-ENTRYPOINT [ 'cpplint' ]
+ENTRYPOINT [ "cpplint" ]
