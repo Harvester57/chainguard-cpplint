@@ -17,7 +17,7 @@ RUN python -m venv venv
 ENV PATH="/cpplint/venv/bin:$PATH"
 
 # Cf. https://pypi.org/project/cpplint/
-RUN pip install cpplint==2.0.2 --no-cache-dir
+RUN pip install -r requirements.txt --no-cache-dir
 
 # Test run
 RUN cpplint --version
