@@ -13,11 +13,12 @@ ENV PYTHONUNBUFFERED=1
 ENV TZ="Europe/Paris"
 
 WORKDIR /cpplint
+COPY requirements.txt .
 RUN python -m venv venv
 ENV PATH="/cpplint/venv/bin:$PATH"
 
 # Cf. https://pypi.org/project/cpplint/
-RUN pip install -r requirements.txt --no-cache-dir
+RUN pip install -r /cpplint/requirements.txt --no-cache-dir
 
 # Test run
 RUN cpplint --version
