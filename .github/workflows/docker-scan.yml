@@ -21,6 +21,7 @@ jobs:
           egress-policy: block
           allowed-endpoints: >
             api.github.com:443
+            github.com:443
             index.rubygems.org:443
             rubygems.org:443
 
