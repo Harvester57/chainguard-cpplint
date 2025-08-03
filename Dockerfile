@@ -14,7 +14,7 @@ ENV PATH="/cpplint/venv/bin:$PATH"
 # Cf. https://pypi.org/project/cpplint/
 RUN pip install -r /cpplint/requirements.txt --no-cache-dir
 
-FROM cgr.dev/chainguard/python:latest@sha256:6faf1846ceff379717bb878b1190d01435627d9d954f72f9e1307b7dde470b58
+FROM chainguard/python:latest@sha256:6faf1846ceff379717bb878b1190d01435627d9d954f72f9e1307b7dde470b58
 
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2025-05-21"
