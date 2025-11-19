@@ -1,5 +1,6 @@
 # Cf. https://hub.docker.com/r/chainguard/python/
-FROM chainguard/python:latest-dev@sha256:e54c972c4097045e913eba44bf0c29f85cc9c64190e6355f7a62743379be9f94 AS builder
+ARG BUILDKIT_SBOM_SCAN_STAGE=true
+FROM chainguard/python:latest-dev@sha256:62dce7cededa1d3e50394d30b33e059a3b7c3d21187fea35bab4419abb245420 AS builder
 
 ENV LANG=C.UTF-8
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -14,7 +15,7 @@ ENV PATH="/cpplint/venv/bin:$PATH"
 # Cf. https://pypi.org/project/cpplint/
 RUN pip install -r /cpplint/requirements.txt --no-cache-dir
 
-FROM chainguard/python:latest@sha256:7e8d50cf67683131e6d8cbad3a95ab1b960c2ce815f24a2f4527f48a18d7b323
+FROM chainguard/python:latest@sha256:136aad7020e00a98f617f3d3343cc7601b7823405eb2bc581eae5f5a8c21e8d0
 
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2025-05-21"
