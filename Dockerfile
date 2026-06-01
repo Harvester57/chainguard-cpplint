@@ -18,7 +18,7 @@ RUN pip install -r /cpplint/requirements.txt --no-cache-dir
 FROM chainguard/python:latest@sha256:ffc3de748e31707704da3ec6566ebaf420a7d6a072ce3ac7fbb9491a6ac69ffd
 
 LABEL maintainer="florian.stosse@gmail.com"
-LABEL lastupdate="2025-05-21"
+LABEL lastupdate="2026-06-01"
 LABEL author="Florian Stosse"
 LABEL description="Cpplint v2.0.2, built using Python Chainguard based image"
 LABEL license="MIT license"
