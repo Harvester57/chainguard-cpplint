@@ -1,6 +1,6 @@
 # Cf. https://hub.docker.com/r/chainguard/python/
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
-FROM chainguard/python:latest-dev@sha256:c23539f80289046e2fa734d3f3fc418833fc22d064a50cc43fa9a6edc28c1615 AS builder
+FROM chainguard/python:latest-dev@sha256:09265da08fb023a0d4e4155298dab3aa514bdd0746b79b11d4252ef806792127 AS builder
 
 ENV LANG=C.UTF-8
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -15,7 +15,7 @@ ENV PATH="/cpplint/venv/bin:$PATH"
 # Cf. https://pypi.org/project/cpplint/
 RUN pip install -r /cpplint/requirements.txt --no-cache-dir
 
-FROM chainguard/python:latest@sha256:1f37785e5cdb70151f36aaa15e1e3cef4571424dbefbf4b0d8a9222535cb13ff
+FROM chainguard/python:latest@sha256:7e7c7716d8eebd4756a0237b8a1a3857344d45bc21b7a052a334ffafc2928119
 
 LABEL maintainer="florian.stosse@gmail.com"
 LABEL lastupdate="2026-06-01"
